@@ -56,3 +56,14 @@ SLOP code keeps its assigned digits, all twelve weeks exist, the deck
 actually built, and the four assignment weights sum to 100) passed clean
 before each push, and I read the rendered pages myself rather than trusting
 a green terminal alone.
+
+That read-through produced the next round,
+[`498d5a8`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-JamesYE03/commit/498d5a8):
+only four of twelve lectures had a deck, casework numbering was too small to
+navigate by, and no page let a student see a whole week's requirements at a
+glance. Before expanding the decks I set one rule — no new fact without a
+source checked this session — which sent the agent back to verify specifics
+I'd left vague the first time (naming Arup as the company in the week 5
+case, citing SIFT's original post, pulling YouTube's actual disclosure
+policy instead of gesturing at "a real platform policy"). That rule is now
+in `CLAUDE.md` under "Sourcing."
