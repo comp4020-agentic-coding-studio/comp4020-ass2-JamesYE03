@@ -1,0 +1,76 @@
+---
+title: "Week 7 — Chain of custody"
+description: Content provenance, the C2PA standard, and signing a file's history instead of guessing at it
+---
+
+# Chain of Custody
+
+## Week 7 — content provenance and C2PA
+
+---
+
+{/* _class: impact */}
+
+# Stop guessing. Start signing.
+
+---
+
+## Six weeks of inference
+
+Every method so far works backwards from the artefact: given only the file
+itself, infer whether it was likely made or altered by a machine. That's
+detective work — necessary, and permanently uncertain.
+
+---
+
+## A different idea
+
+The Coalition for Content Provenance and Authenticity (C2PA) records the truth
+**at the moment of creation**, cryptographically signed, so nobody downstream
+has to guess:
+
+- who or what made the file
+- which tools touched it, and when
+- what was edited, and what the edit changed
+
+---
+
+## The same idea as a criminal chain of custody
+
+Not proof of innocence — an unbroken, tamper-evident record of who held the
+evidence and when. A gap in the chain doesn't prove guilt either. It just
+means you're back to inference.
+
+---
+
+{/* _class: centered */}
+
+![qr](https://www.youtube.com/watch?v=3a77u--YRQE)
+
+Content Credentials, explained — watch before next session
+
+---
+
+## What a valid credential can tell you
+
+- a signed creation and edit history, when one was attached
+- which tool or service produced the file
+
+## What it can't
+
+- that the *absence* of a credential means the file is fake — most content in
+  the world was never signed at all
+- that a signed history is itself immune to tampering upstream of the signature
+
+---
+
+{/* _class: banner */}
+
+## Provenance + watermarking + detection — you eventually need all three
+
+---
+
+## Coming up
+
+Week 8 asks the harder question: what happens once a detection signal becomes
+a target that someone is paid to defeat?
