@@ -20,7 +20,8 @@ spec:
   - investigates a case the student chose independently, not one assigned by
     the course
   - stands on its own, without the author present to explain or defend it
-related: []
+related:
+  - sessions/case-10-drafting-a-policy
 ---
 
 ## The brief
@@ -45,3 +46,9 @@ and what it found, a stated confidence level, and a concrete recommendation —
 to a platform, an institution, or a reader — that the evidence actually
 supports. A five-minute version of the same report is presented in week 12's
 casework session before the written version is due.
+
+An unscoped week for an unscoped assignment is a bad combination, so it
+isn't left until week 12: pitch your case, ungraded, in week 10's casework
+session. Your tutor will tell you then if it's too broad, too narrow, or not
+actually contestable — cheaper to hear two weeks out than to discover it
+yourself the night before the deadline.
