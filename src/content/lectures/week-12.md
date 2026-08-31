@@ -39,3 +39,10 @@ tool inside it, is what you're actually taking with you.
 - final case presentations
 - where this discipline is likely headed next, and how you'd know if you were
   wrong about that
+
+## Further reading
+
+[*AI Snake Oil*](https://press.princeton.edu/books/hardcover/9780691249131/ai-snake-oil)
+is where the throughline this course has followed keeps going after the
+semester ends — a full book-length version of the argument weeks 1 and 3
+only had time to sketch.

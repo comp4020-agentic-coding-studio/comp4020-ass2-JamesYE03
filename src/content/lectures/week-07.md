@@ -46,3 +46,11 @@ some content starts to.
 
 The C2PA Content Credentials explainer (spec.c2pa.org), read as a technical
 document rather than a marketing one.
+
+## Further reading
+
+- [C2PA Content Credentials Explainer](https://spec.c2pa.org/specifications/specifications/2.4/explainer/Explainer.html) —
+  the official specification body's own explainer, the primary source behind
+  this lecture.
+- [Content Credentials, explained](https://www.youtube.com/watch?v=3a77u--YRQE) —
+  a short video walkthrough if you'd rather watch the mechanism than read it.

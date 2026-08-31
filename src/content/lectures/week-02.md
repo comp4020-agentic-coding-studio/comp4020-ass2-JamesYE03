@@ -41,3 +41,11 @@ checked against everything else that is or isn't said about it elsewhere.
 Caulfield & Wineburg, *Verified: How to Think Straight, Get Duped Less, and
 Make Better Decisions about What to Believe Online* (University of Chicago
 Press, 2023), chapters 1–3.
+
+## Further reading
+
+[SIFT (The Four Moves)](https://hapgood.us/2019/06/19/sift-the-four-moves/)
+is Mike Caulfield's own 2019 post introducing the method — the primary
+source *Verified* is built on, released under a CC BY licence, which is why
+so many university library guides quote it directly rather than
+paraphrasing.

@@ -41,3 +41,10 @@ signal can bear, and never resting a serious accusation on a single one.
 - the evasion-tools economy, and why it is structurally guaranteed to exist
 - multi-signal review as the only defensible practice, and why it's still not
   a guarantee
+
+## Further reading
+
+[GPTZero's own accuracy benchmarking page](https://gptzero.me/news/ai-accuracy-benchmarking/)
+is worth reading precisely because it's a vendor describing its own test —
+notice what the methodology does and doesn't control for, and compare it
+against the independent figures cited above.

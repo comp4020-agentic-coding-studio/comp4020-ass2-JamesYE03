@@ -47,3 +47,10 @@ time was being treated as a verdict rather than a lead.
 - burden of proof, applied to content forensics
 - why you argue the side you don't believe before you're allowed to conclude
   anything
+
+## Further reading
+
+[The Washington Post — proving your innocence after a false positive](https://www.washingtonpost.com/technology/2023/08/14/prove-false-positive-ai-detection-turnitin-gptzero/)
+covers exactly what a wrongly accused student actually has to do next, which
+is a more useful thing to read this week than another explanation of why
+detectors fail.

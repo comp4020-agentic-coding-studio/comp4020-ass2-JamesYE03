@@ -41,3 +41,10 @@ could reasonably believe this really happened, it needs a label.
 - disclosure and labelling regimes, compared across platforms
 - the cases every current policy handles badly: satire, research, consented
   synthetic likeness
+
+## Further reading
+
+[YouTube's actual disclosure policy](https://support.google.com/youtube/answer/14328491) —
+read this before the session, not a summary of it. This week's casework asks
+you to find what it doesn't cover, and that only works if you've read the
+real thing closely enough to know.

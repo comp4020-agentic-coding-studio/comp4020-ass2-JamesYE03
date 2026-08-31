@@ -44,3 +44,10 @@ Read the syllabus end to end and bring one piece of content — a text, an
 image, a clip — that you already suspect is synthetic. You will not be asked
 to prove it yet. Just bring your hunch; week 2 is where hunches get held to a
 standard.
+
+## Further reading
+
+[Calling Bullshit](https://callingbullshit.org/) is the course this one
+answers directly — read the home page for the tone this course is aiming
+for, and note the disclaimer at the bottom, which parodies the exact
+rhetorical style the course teaches you to spot.

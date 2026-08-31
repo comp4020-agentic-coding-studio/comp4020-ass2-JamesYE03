@@ -41,3 +41,9 @@ much as it's about the detection.
 
 The Stanford Social Media Lab / BetterUp "workslop" research (2025) and the
 Harvard Business Review follow-up (2026) on why people produce it.
+
+## Further reading
+
+[CNBC's coverage of the workslop research](https://www.cnbc.com/2025/09/23/ai-generated-workslop-is-destroying-productivity-and-teams-researchers-say.html)
+is the fastest way into the study's actual numbers — the $186-a-month figure
+and the reputational-cost findings this lecture cites both come from here.

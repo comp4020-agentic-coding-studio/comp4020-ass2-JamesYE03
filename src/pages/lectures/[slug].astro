@@ -2,11 +2,12 @@
 import { render } from "astro:content";
 import { getPublishedCollection } from "astro-course-university/content";
 import RelatedContent from "astro-course-university/components/RelatedContent.astro";
+import Callout from "astro-theme-university/components/Callout.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
 import { withBase } from "astro-theme-university/url";
 import TeachingTeam from "../../components/TeachingTeam.astro";
 import { formatCourseDate } from "../../lib/dates";
-import { graphCollections, siteConfig } from "../../site-config";
+import { graphCollections, sessionLabels, siteConfig } from "../../site-config";
 
 export async function getStaticPaths() {
   const lectures = await getPublishedCollection("lectures");
@@ -16,11 +17,28 @@ export async function getStaticPaths() {
 const { lecture } = Astro.props;
 const { Content } = await render(lecture);
 const title = `Lecture ${String(lecture.data.week).padStart(2, "0")} — ${lecture.data.title}`;
+
+const sessions = await getPublishedCollection("sessions");
+const thisWeeksCase = sessions.find((session) => session.data.week === lecture.data.week);
 ---
 
 <ContentLayout title={title} description={lecture.data.description} {...siteConfig}>
   <p><strong>{formatCourseDate(lecture.data.date)}</strong></p>
   {lecture.data.slides && <p><a href={withBase(lecture.data.slides)}>Open the slides</a></p>}
+  {
+    thisWeeksCase && (
+      <Callout type="tip">
+        <p>
+          This lecture is read before{" "}
+          <strong>
+            Case {String(thisWeeksCase.data.week).padStart(2, "0")}
+          </strong>
+          , the same week's {sessionLabels.singular.toLowerCase()}:{" "}
+          <a href={withBase(`/sessions/${thisWeeksCase.id}/`)}>{thisWeeksCase.data.title}</a>.
+        </p>
+      </Callout>
+    )
+  }
   <Content />
   <TeachingTeam teachers={lecture.data.teachers} />
   <RelatedContent entry={lecture} collections={graphCollections} heading="Related & further reading" />

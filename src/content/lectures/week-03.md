@@ -42,6 +42,13 @@ that doesn't know its own error rate is not a method.
 Narayanan & Kapoor, *AI Snake Oil* (Princeton University Press, 2024), the
 chapters on generative AI's claims versus its failure modes.
 
+## Further reading
+
+[AI Snake Oil's newsletter](https://www.aisnakeoil.com/t/ai-hype) has the
+original 2023 post where Narayanan calls ChatGPT "a bullshit generator" —
+short, free, and the clearest version of the argument this week's lecture
+borrows.
+
 ## Practice before the session
 
 Try [Spot the Slop](/spot-the-slop/) — six short passages, one guess each.

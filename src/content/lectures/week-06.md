@@ -34,3 +34,11 @@ then spend the second half of the session trying to break each other's.
 - the durability problem: what ordinary handling does to a signal
 - watermarking versus detection versus provenance — three different claims,
   often confused for one
+
+## Further reading
+
+[SynthID](https://deepmind.google/models/synthid/) is Google DeepMind's own
+page for the technology — worth reading for the specific durability claims
+it makes (survives trimming, compression, cropping) so you have something
+concrete to test in this week's casework, rather than a vague promise of
+"robustness."

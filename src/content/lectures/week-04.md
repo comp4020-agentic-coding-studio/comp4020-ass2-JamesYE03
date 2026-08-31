@@ -34,3 +34,11 @@ run both kinds this week, on the same image, and see where they disagree.
 - what a diffusion model leaves behind: artefacts, frequency signatures,
   anatomical tells
 - why "the hands look wrong" was never a durable method
+
+## Further reading
+
+[Deepfake Media Forensics: Status and Future Challenges](https://www.mdpi.com/2313-433X/11/3/73)
+(2025) is a recent survey of the field, organised around the FF4ALL
+research project — useful for seeing how detection, attribution and
+authentication are treated as genuinely separate technical problems, not one
+undifferentiated "spot the fake" task.

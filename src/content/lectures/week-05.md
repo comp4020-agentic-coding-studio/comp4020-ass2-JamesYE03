@@ -36,3 +36,10 @@ advice for anyone outside a research lab.
 - the two cases, and what made each of them work
 - synthesis versus reenactment: different techniques, different tells
 - what a post-hoc forensic review can check, and what it can't
+
+## Further reading
+
+[CNN's original report](https://www.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk)
+on the Arup case has the Hong Kong police briefing in full, including the
+detail this lecture leans on hardest: the employee's own account of
+realising, mid-call, that "everyone was fake."
