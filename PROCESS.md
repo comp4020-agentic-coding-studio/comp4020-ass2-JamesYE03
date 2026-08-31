@@ -1,53 +1,58 @@
 # Process overview
 
-<!-- TEMPLATE: this file is a shape to fill in, not a form. Replace everything
-     in it with your own overview, and delete this comment — `pnpm
-     check:evidence` will remind you if it's still here. -->
-
-Written by you, for a reader: how you got from the brief to the harness and
-agentic workflow behind this submission. Markers read this file and follow its
-citations; they don't trawl the repo for evidence you didn't point at.
-
-This file is the shape; the course site's
-[assessment page](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#what-you-submit)
-is the requirement, and its
-[word counts](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#word-counts)
-cover every deliverable.
-
 ## What I built
 
-One paragraph: the thing, and the idea behind it.
+`SLOP8171: Chain of Custody: Content Forensics for the Synthetic Age`, a
+graduate methods course that treats every AI-slop claim as a case: twelve
+weeks of casework running from textual tells through image, video and
+watermark forensics to content-provenance standards, workplace "workslop",
+platform policy and the ethics of accusation, marked by four
+escalating-difficulty assignments and closed out with an independent
+investigation students choose themselves.
 
 ## How I got here
 
-The account of the process: how the work actually went, and how you knew the
-result was right. Tell it in whatever order makes it clear. A weekly prototype
-needs a paragraph or two; an assignment needs more.
+I didn't start here. My first idea was a course about algorithms stealing
+your attention, built around Johann Hari's *Stolen Focus*. Rather than take
+my own instinct on faith, I had the agent check whether the brief's "niche
+enough that no real university would run it" test actually held. It came
+back with a real Princeton syllabus (HIS490, *Attention Economy*) and a real
+course at the Institute for Christian Studies covering almost the same
+reading list and even the same "digital fasting" exercise I'd been picturing.
+That killed the idea before a single page was written, which is exactly the
+failure the brief warns about and exactly why I asked for evidence instead of
+trusting a hunch.
 
-Cite the record as you go, as links whose text is the commit hash or range and
-whose target is this repo's commit or compare URL, so a reader clicks straight
-to the evidence:
+The replacement came from the same research pass, not from picking off a
+list: Calling Bullshit's own theoretical grounding is Harry Frankfurt's *On
+Bullshit*, and the author of *AI Snake Oil* independently reaches for the
+same essay to describe a chatbot's confident nonsense. That gave the course
+an actual throughline — bullshit to slop, one discipline aimed at a faster
+adversary — rather than a topic bolted onto a template.
 
-- one commit: [`a1b2c3d`](https://github.com/YOUR-ORG/YOUR-REPO/commit/a1b2c3d)
-- a range:
-  [`a1b2c3d...e4f5a6b`](https://github.com/YOUR-ORG/YOUR-REPO/compare/a1b2c3d...e4f5a6b)
+From there I fixed the constraints that mattered to me (postgraduate level,
+two convenors and four tutors, four assignments weighted 10/20/30/40 in
+rising difficulty, an interactive widget) and reviewed the full plan — every
+week's topic, all four assignment briefs, the teaching team — before any file
+was written, rather than approving vibes and correcting fifteen pages later.
 
-To pair a prompt with the commit it produced, quote the prompt (curated, not a
-full transcript) next to the citation:
+The build itself is
+[`326769a`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-JamesYE03/commit/326769a)
+through
+[`0ef66ba`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-JamesYE03/compare/326769a...0ef66ba):
+the course record, twelve weeks of sessions and lectures, six staff profiles,
+four assignments and four slide decks in the first commit, then the
+homepage, policies page, the Spot the Slop widget, original artwork and the
+spec tests in the second. I told the agent up front that hunting stock
+photos for a two-ink illustration style that doesn't exist commercially was
+a waste of time, and to make original art instead if it could — it built flat
+SVG illustrations in the theme's own brand tokens and rasterised them with a
+dependency already in the project (`sharp`), which I checked against the
+starter's exact image dimensions rather than taking on faith.
 
-> the prompt, verbatim
-
-Screenshots are welcome where one carries the point better than a sentence does.
-Commit the file to this repo and link it with a **relative** path, which is what
-makes it render on GitHub: `![alt text](docs/before.png)`. Images don't count
-towards the word count and don't replace the citation.
-
-## Before you ship
-
-`pnpm check:evidence` verifies that this comment is gone, that your citations
-resolve to real commits, that a crit week's reflection entry is in
-`reflections/`, and that your `CLAUDE.md` is there. It checks that your account
-is traceable, not that it is good: that is the marker's call.
-
-Images aren't checked: unlike a citation whose SHA doesn't resolve, a broken
-image is visible the moment this file is rendered on GitHub.
+I verified completion the same way the course does: `pnpm check` (typecheck,
+build, and `spec/course-spec.test.ts`, which I had written to assert the
+SLOP code keeps its assigned digits, all twelve weeks exist, the deck
+actually built, and the four assignment weights sum to 100) passed clean
+before each push, and I read the rendered pages myself rather than trusting
+a green terminal alone.
