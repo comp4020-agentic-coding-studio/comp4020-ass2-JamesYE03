@@ -5,33 +5,38 @@ import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
 import heroImage from "../assets/images/hero-home.avif";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
-
-// STARTER_CONTENT: replace the hero artwork and its alt text below, then
-// remove this comment.
 ---
 
 <ContentLayout
   title={`${courseMeta.code}: ${courseMeta.title}`}
   description={courseMeta.description}
   heroImage={heroImage}
-  heroImageAlt="A lecture theatre reduced to flat gold and black shapes, rows of seats sweeping past the frame, in a two-ink risograph print"
+  heroImageAlt="A magnifying glass held over a grid of flat pixels, three of them picked out in gold, in flat black and gold shapes on warm cream"
   {...siteConfig}
 >
   <ul class="course-tags" aria-label="Course tags">
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
 
-  <!-- STARTER_CONTENT: replace the authored page below, then remove this comment. -->
   <h2>What you will do</h2>
   <p>
-    Say what a student spends their time on — the making, reading, arguing or
-    measuring that fills the weeks. Name the artefact they walk out with.
+    Every week you're handed a case: a passage, an image, a clip, a workplace
+    document, a live dispute — and a growing toolkit for working it properly.
+    You'll run textual and image forensics, embed and break watermarks, read a
+    provenance standard instead of guessing, argue both sides of a real
+    dispute before reaching a verdict, and finish the semester with an
+    independent investigation you chose yourself. You walk out with a
+    portfolio of worked cases and a habit of asking what would actually change
+    your mind.
   </p>
 
   <h2>Who it is for</h2>
   <p>
-    Say who this is aimed at and what they need to already know. Be specific
-    enough that someone can rule themselves in or out without emailing you.
+    Graduate students who already write and read critically and want a
+    concrete, evidence-based practice for the specific problem generative AI
+    creates — not a general media-literacy refresher. You don't need a
+    machine-learning background; you do need patience for a method that
+    admits what it can't yet prove.
   </p>
 
   <h2>Where to go next</h2>
@@ -44,6 +49,9 @@ import { sessionLabels, siteConfig } from "../site-config";
     </Card>
     <Card title="People" href="/people/">
       <p>Who teaches the course and how to reach them.</p>
+    </Card>
+    <Card title="Spot the Slop" href="/spot-the-slop/">
+      <p>A short practice round for week 3's textual tells, open to anyone.</p>
     </Card>
   </CardGrid>
 </ContentLayout>

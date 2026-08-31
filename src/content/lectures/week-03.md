@@ -37,3 +37,9 @@ that doesn't know its own error rate is not a method.
 
 Narayanan & Kapoor, *AI Snake Oil* (Princeton University Press, 2024), the
 chapters on generative AI's claims versus its failure modes.
+
+## Practice before the session
+
+Try [Spot the Slop](/spot-the-slop/) — six short passages, one guess each.
+It won't prepare you for Assignment 1 on its own, but it's a fast way to
+notice your own instincts before this week's session interrogates them.

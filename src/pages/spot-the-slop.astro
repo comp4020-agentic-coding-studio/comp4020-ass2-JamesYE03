@@ -1,0 +1,204 @@
+---
+import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import { siteConfig } from "../site-config";
+
+const rounds = [
+  {
+    text: "My grandmother kept a jar of buttons on the windowsill, sorted by nothing I could ever work out. I asked her once what the system was and she said \"there isn't one, that's the point,\" and went back to her crossword.",
+    answer: "human",
+    tell: "A specific, slightly odd detail (the unexplained button jar) that isn't doing any argumentative work — it's just true. Generated text tends to include details that justify themselves.",
+  },
+  {
+    text: "Family heirlooms can hold immense sentimental value. It's important to note that the meaning of an object often lies not in its function, but in the memories attached to it. In conclusion, even something as simple as a jar of buttons can become a powerful symbol of connection across generations.",
+    answer: "ai",
+    tell: "The rule-of-three hedge (\"it's important to note\"), a summarising \"in conclusion\" on a two-sentence passage, and a claim so general it would fit almost any object at all.",
+  },
+  {
+    text: "Returned it after four days. The strap snapped at the buckle, not the stitching — cheap metal, not bad sewing. Everything else about it was fine, which almost makes it worse.",
+    answer: "human",
+    tell: "A specific point of failure (buckle, not stitching) that requires the writer to have actually handled the object, plus a small, unresolved editorial opinion (\"which almost makes it worse\") that doesn't tie itself up neatly.",
+  },
+  {
+    text: "This update represents an exciting opportunity to leverage our team's synergies. On the other hand, it is worth acknowledging the challenges that come with any period of change. Overall, we remain confident that, by working together, we can achieve great things moving forward.",
+    answer: "ai",
+    tell: "Corporate hedge-words with no content behind them (\"leverage synergies\"), a symmetrical \"on the other hand\" that isn't actually contrasting anything, and a closing sentence that could be pasted onto any announcement ever written.",
+  },
+  {
+    text: "put the kettle on twice and forgot both times. this is a whole personality now",
+    answer: "human",
+    tell: "Lowercase, no closing punctuation, and a joke that only works because it undercuts itself rather than explaining itself — generated text almost always closes the loop on its own joke.",
+  },
+  {
+    text: "Octopuses are fascinating creatures. They have three hearts, and their blood is blue due to a copper-based protein. Additionally, octopuses are known for their remarkable intelligence, often solving complex puzzles. These incredible animals continue to amaze scientists around the world.",
+    answer: "ai",
+    tell: "A string of true-but-disconnected trivia with near-identical sentence openings (\"They have\", \"Additionally\", \"These incredible\"), and a closing sentence of pure, contentless enthusiasm.",
+  },
+];
+---
+
+<ContentLayout
+  title="Spot the Slop"
+  description="A short practice round for week 3's textual tells — six passages, one guess each, no scoring that follows you home."
+  {...siteConfig}
+>
+  <p>
+    Six short passages. For each one, guess whether a person wrote it or a
+    language model did, then check the tell. These are worked examples for
+    week 3's lecture, not a rigorous test — real casework always uses more
+    than one method, which is rather the point by week 7.
+  </p>
+
+  <div id="spot-the-slop-app" data-rounds={JSON.stringify(rounds)}>
+    <p>Loading the casework…</p>
+  </div>
+</ContentLayout>
+
+<script>
+  interface Round {
+    text: string;
+    answer: "human" | "ai";
+    tell: string;
+  }
+
+  const root = document.getElementById("spot-the-slop-app");
+  if (root) {
+    const rounds: Round[] = JSON.parse(root.dataset.rounds ?? "[]");
+    let current = 0;
+    let score = 0;
+
+    function render() {
+      if (!root) return;
+
+      if (current >= rounds.length) {
+        root.innerHTML = `
+          <div class="sts-done" role="status">
+            <h2>Case closed</h2>
+            <p>${score} out of ${rounds.length} correct. Run it again — the passages don't change, but a second look at the ones you missed is worth more than a higher score.</p>
+            <button type="button" class="sts-restart">Start over</button>
+          </div>
+        `;
+        root.querySelector(".sts-restart")?.addEventListener("click", () => {
+          current = 0;
+          score = 0;
+          render();
+        });
+        return;
+      }
+
+      const round = rounds[current];
+      root.innerHTML = `
+        <div class="sts-round" aria-live="polite">
+          <p class="sts-progress">Passage ${current + 1} of ${rounds.length} &middot; score ${score}</p>
+          <blockquote class="sts-text">${round.text}</blockquote>
+          <div class="sts-choices">
+            <button type="button" class="sts-choice" data-choice="human">A person wrote this</button>
+            <button type="button" class="sts-choice" data-choice="ai">A model generated this</button>
+          </div>
+          <div class="sts-verdict" hidden></div>
+        </div>
+      `;
+
+      const verdict = root.querySelector<HTMLDivElement>(".sts-verdict");
+      const choices = root.querySelectorAll<HTMLButtonElement>(".sts-choice");
+      choices.forEach((button) => {
+        button.addEventListener("click", () => {
+          choices.forEach((b) => (b.disabled = true));
+          const correct = button.dataset.choice === round.answer;
+          if (correct) score += 1;
+          if (verdict) {
+            verdict.hidden = false;
+            verdict.innerHTML = `
+              <p class="sts-result">${correct ? "Correct." : "Not this time."} This one was ${round.answer === "human" ? "written by a person" : "generated by a model"}.</p>
+              <p class="sts-tell">${round.tell}</p>
+              <button type="button" class="sts-next">${current + 1 < rounds.length ? "Next passage" : "See your result"}</button>
+            `;
+            verdict.querySelector(".sts-next")?.addEventListener("click", () => {
+              current += 1;
+              render();
+            });
+          }
+        });
+      });
+    }
+
+    render();
+  }
+</script>
+
+<style>
+  #spot-the-slop-app {
+    margin-block: 2rem;
+    max-width: 42rem;
+  }
+
+  .sts-progress {
+    font-size: 0.9rem;
+    color: var(--at-text-secondary);
+  }
+
+  .sts-text {
+    margin: 1rem 0;
+    padding: 1.25rem 1.5rem;
+    border-inline-start: 4px solid var(--at-primary);
+    background: var(--at-bg-alt);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .sts-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-block: 1rem;
+  }
+
+  .sts-choice {
+    padding: 0.6rem 1.1rem;
+    border: 2px solid var(--at-primary);
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .sts-choice:hover:not(:disabled) {
+    background: var(--at-primary);
+    color: white;
+  }
+
+  .sts-choice:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .sts-verdict {
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--at-bg-alt);
+    border-radius: 0.5rem;
+  }
+
+  .sts-result {
+    font-weight: 600;
+    margin-block-end: 0.4rem;
+  }
+
+  .sts-next,
+  .sts-restart {
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 999px;
+    background: var(--at-primary);
+    color: white;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .sts-done {
+    padding: 1.5rem;
+    background: var(--at-bg-alt);
+    border-radius: 0.5rem;
+  }
+</style>
