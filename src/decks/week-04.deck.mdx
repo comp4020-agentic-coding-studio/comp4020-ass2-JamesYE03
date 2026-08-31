@@ -1,0 +1,72 @@
+---
+title: "Week 4 — Pixels don't lie (usually)"
+description: Reverse search, metadata and GAN fingerprints, and where each one stops working
+---
+
+# Pixels Don't Lie (Usually)
+
+## Week 4 — image forensics
+
+---
+
+## Two long histories collided
+
+- **old**: retouched, staged and misattributed photographs — reverse image
+  search, EXIF, shadow-and-light consistency
+- **new**: diffusion models hallucinate an image from nothing, leaving a
+  different kind of trace entirely
+
+---
+
+{/* _class: impact */}
+
+# Most fakes aren't generated. They're recirculated.
+
+---
+
+## The cheap checks first
+
+- reverse image search — has this exact image appeared before, with a
+  different caption or date?
+- metadata (EXIF) — camera, timestamp, edit history, when it survives
+  re-upload
+- these catch a shocking amount, because most misinformation is a real photo
+  misdated, not a synthetic one
+
+---
+
+## What a diffusion model leaves behind
+
+- irregularities in frequency space invisible to the eye
+- inconsistent reflections and shadows across a scene
+- anatomical tells — hands, teeth, text-within-the-image — that are getting
+  rarer every model generation
+
+---
+
+{/* _class: quote */}
+
+"The hands look wrong" was never a durable method.
+
+---
+
+## Reading
+
+*Deepfake Media Forensics: Status and Future Challenges* (2025) organises the
+field into detection, attribution, passive authentication, and
+real-world-scenario detection — worth skimming for how fast each category is
+moving.
+
+---
+
+{/* _class: centered */}
+
+![qr](https://www.mdpi.com/2313-433X/11/3/73)
+
+Deepfake Media Forensics: Status and Future Challenges (2025)
+
+---
+
+{/* _class: banner */}
+
+## This week's casework: run both an old check and a new one, on the same image

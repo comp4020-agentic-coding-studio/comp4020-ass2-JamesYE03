@@ -1,0 +1,74 @@
+---
+title: "Week 6 — Invisible ink"
+description: Watermarking synthetic media, and what durability actually costs
+---
+
+# Invisible Ink
+
+## Week 6 — watermarking
+
+---
+
+{/* _class: impact */}
+
+# Over 10 billion pieces of content. One company's watermark.
+
+---
+
+## SynthID, briefly
+
+Google DeepMind's watermarking system embeds an imperceptible signal directly
+into AI-generated images, audio, text and video — across Gemini, Imagen,
+Lyria and Veo. Since launching at I/O 2023, it's watermarked more than 10
+billion pieces of content, and the text method is open-sourced for anyone to
+use.
+
+---
+
+## Deliberate, not accidental
+
+Unlike a stylistic tell, a watermark is designed in on purpose:
+
+- the generator nudges statistics only its own detector recognises
+- invisible to a viewer, in principle recoverable by the matching tool
+- Google states the SynthID watermark is designed to survive trimming, noise,
+  compression, cropping and filtering
+
+---
+
+{/* _class: quote */}
+
+"Designed to survive" is a claim about intent. Whether it actually does, for
+your specific file, after three re-uploads, is an empirical question.
+
+---
+
+## Where it gets harder
+
+Independent research through 2025 kept finding that watermarking and
+provenance signals — however well engineered — can be weakened, removed, or
+forged with surprisingly ordinary tools. A watermark surviving a lab test and
+a watermark surviving a screenshot, a crop and a re-compress are two
+different claims.
+
+---
+
+{/* _class: centered */}
+
+![qr](https://deepmind.google/models/synthid/)
+
+SynthID — Google DeepMind's official page
+
+---
+
+## Three different claims, often confused for one
+
+- **watermarking** — a signal deliberately embedded at creation
+- **detection** — inferring machine origin from an artefact after the fact
+- **provenance** (next week) — a signed record of the file's whole history
+
+---
+
+{/* _class: banner */}
+
+## This week's casework: embed a watermark, then try to kill it yourself

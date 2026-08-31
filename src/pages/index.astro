@@ -2,6 +2,7 @@
 import Card from "astro-theme-university/components/Card.astro";
 import CardGrid from "astro-theme-university/components/CardGrid.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import ScheduleTable from "../components/ScheduleTable.astro";
 import heroImage from "../assets/images/hero-home.avif";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
@@ -17,6 +18,13 @@ import { sessionLabels, siteConfig } from "../site-config";
   <ul class="course-tags" aria-label="Course tags">
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
+
+  <h2>The twelve weeks</h2>
+  <p>
+    Every lecture, every casework session, and every assignment deadline, in
+    the order they actually happen. Each cell links to the real page.
+  </p>
+  <ScheduleTable />
 
   <h2>What you will do</h2>
   <p>

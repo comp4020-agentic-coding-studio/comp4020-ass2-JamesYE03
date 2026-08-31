@@ -7,9 +7,13 @@ week: 3
 date: 2027-03-08
 teachers:
   - naledi-mokoena
+slides: /decks/week-03/
 related:
   - sessions/case-03-the-text-workup
   - assessments/first-forensics
+links:
+  - label: "AI Snake Oil — why a chatbot is \"a bullshit generator\""
+    url: https://www.aisnakeoil.com/t/ai-hype
 ---
 
 Early tells were almost embarrassingly easy to teach: a suspicious fondness

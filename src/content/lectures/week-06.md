@@ -7,8 +7,12 @@ week: 6
 date: 2027-03-29
 teachers:
   - ravi-chandrasekaran
+slides: /decks/week-06/
 related:
   - sessions/case-06-watermark-hunting
+links:
+  - label: "SynthID — Google DeepMind's official watermarking page"
+    url: https://deepmind.google/models/synthid/
 ---
 
 Unlike a stylistic tell, a watermark is deliberate: a generator embeds a

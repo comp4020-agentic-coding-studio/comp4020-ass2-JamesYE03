@@ -6,9 +6,13 @@ week: 11
 date: 2027-05-03
 teachers:
   - tomas-vidergar
+slides: /decks/week-11/
 related:
   - sessions/case-11-cross-examination
   - assessments/cross-examination
+links:
+  - label: "Washington Post — proving your innocence after a false positive"
+    url: https://www.washingtonpost.com/technology/2023/08/14/prove-false-positive-ai-detection-turnitin-gptzero/
 ---
 
 Every method in this course can be pointed at an innocent person. A
@@ -25,6 +29,16 @@ standard: what would it take for you to be *confident* in an accusation, not
 just suspicious, and what do you owe someone when you're wrong. It sets up the
 week's casework, which asks you to argue both sides of a real provenance
 dispute before you're allowed to reach a verdict.
+
+This isn't hypothetical. A Johns Hopkins professor had to hand-review a
+student's drafts after a detector flagged over 90% of her own paper as
+machine-written. Two University of California, Davis students were flagged
+and separately cleared on appeal. In early 2026, a court ordered an
+Adelphi University student's "100% AI" finding expunged, calling it without
+valid basis. More than two dozen universities, including MIT, Yale and UC
+Berkeley, have since restricted or dropped AI-detection tools outright — not
+because detection doesn't matter, but because a tool wrong 5 to 20% of the
+time was being treated as a verdict rather than a lead.
 
 ## Outline
 

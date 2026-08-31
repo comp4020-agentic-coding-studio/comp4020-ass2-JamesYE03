@@ -7,8 +7,12 @@ week: 2
 date: 2027-03-01
 teachers:
   - naledi-mokoena
+slides: /decks/week-02/
 related:
   - sessions/case-02-your-first-sift
+links:
+  - label: "SIFT (The Four Moves) — Mike Caulfield's original 2019 post"
+    url: https://hapgood.us/2019/06/19/sift-the-four-moves/
 ---
 
 Most advice about online misinformation tells you to think harder about the

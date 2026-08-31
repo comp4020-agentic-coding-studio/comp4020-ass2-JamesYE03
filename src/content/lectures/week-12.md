@@ -11,6 +11,9 @@ slides: /decks/week-12/
 related:
   - sessions/case-12-the-slop-report
   - assessments/the-slop-report
+links:
+  - label: "AI Snake Oil — where this discipline keeps going"
+    url: https://press.princeton.edu/books/hardcover/9780691249131/ai-snake-oil
 ---
 
 No single method from this course is sufficient on its own, and by now that

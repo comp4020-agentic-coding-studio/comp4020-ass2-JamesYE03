@@ -1,0 +1,72 @@
+---
+title: "Week 8 — The arms race"
+description: Vendor benchmarks, independent testing, and Goodhart's Law applied to detection
+---
+
+# The Arms Race
+
+## Week 8
+
+---
+
+{/* _class: impact */}
+
+# 99.3% accuracy. Also: 80–92% accuracy.
+
+## Same class of tool. Different measurement.
+
+---
+
+## Two numbers, one detector
+
+- **vendor's own benchmark**: 99.3% accuracy across 3,000 samples, 0.24%
+  false-positive rate
+- **independent reviewers**, same class of tool: 80–92% in real-world use,
+  falling to roughly 96.5% even for a strong performer once the text is
+  paraphrased or lightly edited rather than generated clean
+
+---
+
+## Neither number is "wrong"
+
+They're measuring different things: a clean benchmark versus content that's
+been through exactly the kind of editing real writing goes through. The gap
+between them is itself the lesson.
+
+---
+
+{/* _class: quote */}
+
+Goodhart's Law: when a measure becomes a target, it stops being a good
+measure.
+
+---
+
+## Applied here
+
+The moment a detector's verdict starts costing someone a grade, a payment or
+a job, someone builds a product whose only purpose is to remove the signal
+that verdict depends on. That's not a bug in any one detector. It's what
+happens to any single signal once enough weight rests on it.
+
+---
+
+{/* _class: centered */}
+
+![qr](https://gptzero.me/news/ai-accuracy-benchmarking/)
+
+Read a vendor's own benchmark methodology — critically
+
+---
+
+## The practice, not the tool
+
+No detector deserves to be the whole case. Multi-signal review — text, image,
+provenance, context — is the only defensible practice, and even that isn't a
+guarantee.
+
+---
+
+{/* _class: banner */}
+
+## This week's casework: try to beat a detector yourself. Document what worked.

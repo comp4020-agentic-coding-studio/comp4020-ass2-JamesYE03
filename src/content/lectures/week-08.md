@@ -7,15 +7,23 @@ week: 8
 date: 2027-04-12
 teachers:
   - tomas-vidergar
+slides: /decks/week-08/
 related:
   - sessions/case-08-breaking-a-detector
+links:
+  - label: "A detector vendor's own accuracy benchmark — read it critically"
+    url: https://gptzero.me/news/ai-accuracy-benchmarking/
 ---
 
-By 2025, independent testing of commercial AI-text detectors was finding
-accuracy figures that swung wildly between products, and sometimes for the
-same product between months — one evasion-focused tool tested at effectively
-perfect detection accuracy in one review cycle and near-random a few months
-later. That is not a story about bad engineering. It is a story about
+One detector vendor's own benchmark reports 99.3% accuracy across 3,000
+samples, with a false-positive rate of 0.24%. Independent reviewers testing
+the same class of tool put real-world accuracy closer to 80–92%, falling
+further — to around 96.5% for that same vendor — the moment the text has
+been paraphrased or mixed with human editing rather than generated cleanly.
+Neither number is wrong, exactly; they're measuring different things, and
+the gap between a vendor's self-reported figure and an independent test is
+itself the first thing a forensic reviewer should learn to distrust. That is
+not a story about bad engineering. It is a story about
 Goodhart's Law: the moment a detection signal becomes a target — an "AI
 content" flag that costs a creator a grade, a payment, a job — someone builds
 a product whose only job is to remove that signal.

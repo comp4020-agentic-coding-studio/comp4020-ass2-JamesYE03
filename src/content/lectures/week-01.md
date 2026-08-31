@@ -10,6 +10,9 @@ teachers:
 slides: /decks/week-01/
 related:
   - sessions/case-01-scene-of-the-crime
+links:
+  - label: "Calling Bullshit — the course and book this one answers"
+    url: https://callingbullshit.org/
 ---
 
 In 2005 the philosopher Harry Frankfurt published a short, serious essay called

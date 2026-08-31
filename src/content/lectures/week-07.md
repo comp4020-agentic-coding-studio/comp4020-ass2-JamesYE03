@@ -11,6 +11,11 @@ slides: /decks/week-07/
 related:
   - sessions/case-07-the-full-workup
   - assessments/the-full-workup
+links:
+  - label: "C2PA Content Credentials Explainer (official spec)"
+    url: https://spec.c2pa.org/specifications/specifications/2.4/explainer/Explainer.html
+  - label: "Content Credentials, explained (video)"
+    url: https://www.youtube.com/watch?v=3a77u--YRQE
 ---
 
 Everything up to this week has been guesswork with increasingly good

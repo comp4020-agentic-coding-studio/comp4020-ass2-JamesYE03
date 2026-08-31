@@ -6,8 +6,12 @@ week: 4
 date: 2027-03-15
 teachers:
   - ravi-chandrasekaran
+slides: /decks/week-04/
 related:
   - sessions/case-04-the-image-workup
+links:
+  - label: "Deepfake Media Forensics: Status and Future Challenges (2025)"
+    url: https://www.mdpi.com/2313-433X/11/3/73
 ---
 
 Image forensics has two long histories that recently collided. One is old:
